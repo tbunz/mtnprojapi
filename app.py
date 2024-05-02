@@ -7,6 +7,10 @@ from selenium.webdriver.common.by import By
 
 import urllib.parse
 
+@app.route("/")
+def sanity():
+	return {"sane?": "yes"}
+
 @app.route("/search/<query>")
 def search(query):
 	# Selenium browser to run JS from mountainproject.com page
