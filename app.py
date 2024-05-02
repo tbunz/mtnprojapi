@@ -15,15 +15,19 @@ def sanity():
 def search(query):
 	# Selenium browser to run JS from mountainproject.com page
 	chrome_options = Options()
+	chrome_options.page_load_strategy = 'eager'
 	chrome_options.add_argument('--headless')
 	chrome_options.add_argument('--no-sandbox')
 	chrome_options.add_argument('--disable-dev-shm-usage')
+
 	driver = webdriver.Chrome(options=chrome_options)
 
 	url_q = urllib.parse.quote(query)
 	full_url = "https://www.mountainproject.com/search?q=" + url_q
 	driver.get(full_url)
-	driver.implicitly_wait(0.5)
+
+	# Wait at least 1 second for content to render. Earlier if it comes
+	driver.implicitly_wait(1)
 
 	# All climbs pulled up from search
 	# XPATH to parse through rendered HTML ... whole thang goes down if they change this layout
@@ -47,7 +51,7 @@ def search(query):
 
 	return {
 		"length": len(climbs),
-		"climb": climbs
+		"climbs": climbs
 		}
 
 if __name__ == "__main__":
