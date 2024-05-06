@@ -1,5 +1,5 @@
 # mtnprojapi
-## http://64.23.204.175/
+## https://climbingapi.com/
 ### Public facing API for mountainproject.com
 This project is entirely educational and not being used to generate any income. It is only public facing in order to explore and showcase skills related to web development. Other than me, very few users will ever interact with this site.
 
@@ -9,13 +9,13 @@ This project is entirely educational and not being used to generate any income. 
 - Response from mountainproject.com is parsed and relevant information is provided in JSON format
 
 ### Usage
-`http://64.23.204.175/` \
+`https://climbingapi.com/` \
 Sanity check home path. Useful for testing. Returns:
 ```
 {"sane?":"yes"}
 ```
 \
-`http://64.23.204.175/search/<query>` \
+`https://climbingapi.com/search/<query>` \
 `<query>` is a string of text to search on mountainproject.com. Returns a list of climbs relevant to the search, and the number of climbs returned:
 ```
 {
