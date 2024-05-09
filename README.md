@@ -42,7 +42,7 @@ Sanity check home path. Useful for testing. Returns:
 ```
 \
 `https://climbingapi.com/climb_info/<climb_dict>` \
-`<climb_dict>` is a dictionary of `"<unique_id_num>": "<climb_name>"` pairs. In other words, the climb ID as key and climb name as value, as according to mountainproject.com. Returns a list of climb info objects:
+`<climb_dict>` is a dictionary of `"<unique_id_num>": "<climb_name>"` pairs. In other words, the climb ID (found in HTTP link to climb's page) as key and climb name as value. Returns a list of climb info objects:
 ```
 [
   {
