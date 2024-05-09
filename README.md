@@ -40,6 +40,35 @@ Sanity check home path. Useful for testing. Returns:
   "length": <int>
 }
 ```
+\
+`https://climbingapi.com/climb_info/<climb_dict>` \
+`<climb_dict>` is a dictionary of `"<unique_id_num>": "<climb_name>"` pairs. In other words, the climb ID as key and climb name as value, as according to mountainproject.com. Returns a list of climb info objects:
+```
+[
+  {
+    "description": <string>
+    "fa": <string>,
+    "grade": <string>,
+    "img1": <string link to first image on page>,
+    "name": <string>,
+    "protection": <string>
+    "type": <string>,
+    "uid": <string>
+  },
+  {
+    "description": <string>
+    "fa": <string>,
+    "grade": <string>,
+    "img1": <string link to first image on page>,
+    "name": <string>,
+    "protection": <string>
+    "type": <string>,
+    "uid": <string>
+  },
+...
+
+]
+```
 ### Summary of Tools
 - Python (Flask framework, Selenium for requests/parsing)
 - Flask app runs requests, parsing, and path handling
