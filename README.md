@@ -1,5 +1,5 @@
 # mtnprojapi
-## https://climbingapi.com/
+## (used to live at) https://climbingapi.com/
 ### Public facing API for mountainproject.com
 This project is entirely educational and not being used to generate any income. It is only public facing in order to explore and showcase skills related to web development. Other than me, very few users will ever interact with this site.
 
